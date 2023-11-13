@@ -1,0 +1,93 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body,html{
+  background: #f4f4f4;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+/* navbar designs */
+#navbar ul{
+  list-style: none;
+}
+#navbar ul li{
+  color: #333;
+  display: inline-block;
+  position: relative;
+  padding: 1rem;
+}
+#navbar ul li a{
+  text-decoration: none;
+  color: #333;
+}
+#navbar ul li ul{
+  display: none;
+}
+
+/* background color on all main list-items */
+#navbar ul li:hover {
+  color: #fff;
+  background: coral;
+  cursor: pointer;
+}
+#navbar ul li:hover a{
+  color: #fff;
+}
+
+/* nested dropdown show */
+#navbar ul li:hover ul{
+  display: block;
+  position: absolute;
+  width: 200px;
+  left: 0;
+  margin-top: 1rem;
+}
+#navbar ul li:hover ul li{
+  height: 3.5rem;
+  display: block;
+  background: #e7e7e7;
+}
+#navbar ul li:hover ul li a{
+  color: #333;
+}
+#navbar ul li:hover ul li:hover{
+  background: #e0e0e0;
+  color: inherit;
+}
+#navbar ul li:hover ul li span{
+  float: right;
+  background: coral;
+  color: #fff;
+  padding: 0.2rem 0.5rem ;
+  text-align: center;
+  border-radius: 50px;
+  font-size: 0.8rem;
+}
+#navbar ul li:hover ul li:hover span{
+  background: chocolate;
+}
+#showcase{
+  display: flex;
+  flex-direction: column;
+  height: 300px;
+  justify-content: center;
+  align-items: center;
+  background: coral;
+  text-align: center;
+  padding: 0 2rem;
+}
+#showcase h1{
+  color: #ffff;
+  font-size: 4rem;
+}
+@media (max-width:600px){
+   #navbar ul li{
+    display: block;
+   }
+   #navbar ul li:hover ul{
+    width: 100%;
+    position: relative;
+   }
+}
